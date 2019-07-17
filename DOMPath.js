@@ -5,8 +5,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-const JSDOM = require("jsdom").JSDOM;
-const { Node } = new JSDOM().window;
+require('css.escape');
+const { Node, ShadowRootTypes } = require('./DOMNode');
 
 let Elements = {};
 Elements.DOMPath = {};
@@ -18,7 +18,7 @@ Elements.DOMPath = {};
  */
 Elements.DOMPath.fullQualifiedSelector = function(node, justSelector) {
   if (node.nodeType !== Node.ELEMENT_NODE)
-    return node.localName() || node.nodeName().toLowerCase();
+    return node.localName || node.nodeName.toLowerCase();
   return Elements.DOMPath.cssPath(node, justSelector);
 };
 
@@ -54,7 +54,7 @@ Elements.DOMPath.cssPath = function(node, optimized) {
 Elements.DOMPath.canGetJSPath = function(node) {
   let wp = node;
   while (wp) {
-    if (wp.ancestorShadowRoot() && wp.ancestorShadowRoot().shadowRootType() !== SDK.DOMNode.ShadowRootTypes.Open)
+    if (wp.ancestorShadowRoot() && wp.ancestorShadowRoot().shadowRootType() !== ShadowRootTypes.Open)
       return false;
     wp = wp.ancestorShadowHost();
   }
@@ -102,7 +102,7 @@ Elements.DOMPath._cssPathStep = function(node, optimized, isTargetNode) {
   if (optimized) {
     if (id)
       return new Elements.DOMPath.Step(idSelector(id), true);
-    const nodeNameLower = node.nodeName().toLowerCase();
+    const nodeNameLower = node.nodeName.toLowerCase();
     if (nodeNameLower === 'body' || nodeNameLower === 'head' || nodeNameLower === 'html')
       return new Elements.DOMPath.Step(node.nodeNameInCorrectCase(), true);
   }
@@ -142,7 +142,7 @@ Elements.DOMPath._cssPathStep = function(node, optimized, isTargetNode) {
   let needsNthChild = false;
   let ownIndex = -1;
   let elementIndex = -1;
-  const siblings = parent.children();
+  const siblings = parent.children;
   for (let i = 0; (ownIndex === -1 || !needsNthChild) && i < siblings.length; ++i) {
     const sibling = siblings[i];
     if (sibling.nodeType !== Node.ELEMENT_NODE)
