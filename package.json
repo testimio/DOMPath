@@ -1,6 +1,6 @@
 {
-  "name": "dompath",
-  "version": "1.0.0",
+  "name": "chrome-dompath",
+  "version": "1.0.1",
   "description": "Chrome DevTools DOMPath implementation",
   "main": "lib/DOMPath.js",
   "browser": {
