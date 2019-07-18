@@ -2,7 +2,12 @@
   "name": "dompath",
   "version": "1.0.0",
   "description": "Chrome DevTools DOMPath implementation",
-  "main": "DOMPath.js",
+  "main": "lib/DOMPath.js",
+  "browser": {
+    "index.js": "lib/DOMPath.js",
+    "jsdom": false,
+    "css.escape": false
+  },
   "scripts": {
     "test": "nyc mocha ./**/*.test.js"
   },
@@ -20,11 +25,11 @@
   },
   "homepage": "https://github.com/testimio/DOMPath#readme",
   "dependencies": {
-    "jsdom": "^15.1.1"
+    "jsdom": "^15.1.1",
+    "css.escape": "^1.5.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "css.escape": "^1.5.1",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1"
   }

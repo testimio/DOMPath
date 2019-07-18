@@ -12,4 +12,4 @@ coverage
 # Dependency directories
 node_modules/
 
-launch.json
+.vscode/
