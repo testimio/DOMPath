@@ -6,7 +6,7 @@ Its methods can be accessed via the following menu:
 ![DOMPath-use](DOMPath-use.png "DOMPath use")
 
 ## Installation
-[![NPM Version](https://img.shields.io/npm/v/DOMPath.svg?style=flat-square)](https://www.npmjs.com/package/DOMPath) [![NPM Downloads](https://img.shields.io/npm/dt/DOMPath.svg?style=flat-square)](https://npm-stat.com/charts.html?package=DOMPath)[![License](https://img.shields.io/github/license/rannn505/DOMPath.svg?style=flat-square)](https://github.com/testimio/DOMPath/blob/master/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/chrome-dompath.svg?style=flat-square)](https://www.npmjs.com/package/chrome-dompath) [![NPM Downloads](https://img.shields.io/npm/dt/chrome-dompath.svg?style=flat-square)](https://npm-stat.com/charts.html?package=chrome-dompath)[![License](https://img.shields.io/github/license/testimio/DOMPath.svg?style=flat-square)](https://github.com/testimio/chrome-dompath/blob/master/LICENSE)
 ```
 npm i -S chrome-dompath
 ```
