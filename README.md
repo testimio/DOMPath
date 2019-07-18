@@ -1,7 +1,7 @@
 This package is a [little piece](https://github.com/ChromeDevTools/devtools-frontend/blob/6b5621bb7709854a4697b3aa794822c5898f4d09/front_end/elements/DOMPath.js) of [Google's Chromium DevTools project](https://github.com/ChromeDevTools/devtools-frontend) which modified to make it work on JSDOM.
 
 The DOMPath is responsible for generating a selector given an element in a particular DOM hierarchy.
-Its methods can be accessed via the following menu:
+Its methods can be accessed via the following menu:<br/>
 ```Open DevTools -> Navigate to Elements tab -> Right click on selected Element -> Copy```
 ![DOMPath-use](DOMPath-use.png "DOMPath use")
 
