@@ -1,12 +1,19 @@
 {
   "name": "chrome-dompath",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Chrome DevTools DOMPath implementation",
   "main": "lib/DOMPath.js",
+  "types": "lib/DOMPath.d.ts",
   "browser": {
     "index.js": "lib/DOMPath.js",
     "jsdom": false,
     "css.escape": false
+  },
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "lib"
   },
   "scripts": {
     "test": "nyc mocha ./**/*.test.js"
